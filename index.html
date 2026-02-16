@@ -1,0 +1,1045 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NETA Examination | NavUday Educational Trust of Assam</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Arizonia&family=Great+Vibes&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Share+Tech&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Great+Vibes&family=Luckiest+Guy&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f9fafb;
+        --text: #1f2937;
+        --muted: #6b7280;
+        --accent: #2563eb;
+
+        --purple: #4f46e5;
+        --blue: #2563eb;
+        --gold: #eab308;
+        --orange: #f97316;
+      }
+
+      * {
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter,
+          sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        width: 100%;
+      }
+
+      h2 {
+        margin-bottom: 40px;
+      }
+
+      .lato-bold {
+        font-family: "Lato", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        text-align: center;
+      }
+
+      .lora-rank {
+        /* font-family: "Lora", serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: #000000;
+        text-align: center;
+        text-transform: uppercase;
+        font-style: normal; */
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      /* ================= HEADER ================= */
+      header {
+        background: white;
+        border-bottom: 1px solid #e5e7eb;
+        padding: 24px;
+      }
+
+      .header-inner {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+      }
+
+      .header-inner img {
+        height: 70px;
+        vertical-align: middle;
+        margin-right: 16px;
+      }
+
+      .header-inner h1 {
+        align-self: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 3rem;
+      }
+
+      header p {
+        margin: 4px 0 0;
+        color: var(--muted);
+      }
+
+      /* ================= NAV ================= */
+      nav {
+        background: white;
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .nav-inner {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        gap: 30px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: var(--muted);
+        padding: 14px 0;
+        font-weight: 500;
+        font-size: 1.2rem;
+      }
+
+      nav a:hover {
+        color: #ffaa47;
+        /* border-bottom: 2px solid var(--accent); */
+      }
+
+      .notification-container {
+        width: 100%;
+        padding: 0 20%;
+        background-color: #ffdb69;
+      }
+
+      marquee ul {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+      }
+
+      marquee ul li {
+        margin-right: 40px;
+      }
+
+      marquee ul li a {
+        text-decoration: none;
+        color: #1f2937;
+        font-weight: 600;
+        font-size: 1.2rem;
+      }
+
+      marquee ul li a:hover {
+        text-decoration: underline;
+        color: var(--blue);
+      }
+
+      /* ================= MAIN ================= */
+      main {
+        width: 100%;
+        margin: 60px auto;
+        margin-bottom: 0;
+      }
+
+      section {
+        width: 60%;
+        margin: auto;
+      }
+
+      /* ================= ABOUT US ================= */
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+
+      .about-image img {
+        width: fit-content;
+        border-radius: 16px;
+      }
+
+      /* ================= ABOUT SLIDER ================= */
+      .about-slider {
+        position: relative;
+        width: 100%;
+        height: 350px;
+        overflow: hidden;
+        border-radius: 16px;
+      }
+
+      /* Important Fix */
+      .slides {
+        display: flex;
+        height: 100%;
+        animation: slide 12s infinite linear; /* changed to linear */
+      }
+
+      .slides img {
+        width: 100%;
+        height: 100%;
+        flex: 0 0 100%; /* VERY IMPORTANT */
+        object-fit: cover; /* or contain */
+        display: block; /* removes inline spacing */
+      }
+
+      /* Auto Slide Animation */
+      @keyframes slide {
+        0% {
+          transform: translateX(0%);
+        }
+        30% {
+          transform: translateX(0%);
+        }
+
+        35% {
+          transform: translateX(-100%);
+        }
+        65% {
+          transform: translateX(-100%);
+        }
+
+        70% {
+          transform: translateX(-200%);
+        }
+        100% {
+          transform: translateX(-200%);
+        }
+      }
+
+      /* ================= VISION & AIMS ================= */
+      .vision-section {
+        padding: 80px 20px;
+      }
+
+      .aims-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 25px;
+      }
+
+      .aim-card {
+        background: #ffdb69;
+        padding: 25px;
+        border-radius: 14px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .aim-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+      }
+
+      .aim-card h4 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: #1f2937;
+        text-align: center;
+      }
+
+      .aim-card p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #4b5563;
+      }
+
+      /* ================= EXAM FLOW ================= */
+      .exam-container {
+        width: 100%;
+        background-color: #e2e3c1;
+      }
+
+      .exam-flow-section {
+        width: 60%;
+        margin: auto;
+        padding: 40px 0;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 36px;
+        font-weight: 700;
+      }
+
+      .section-subtitle {
+        /* text-align: center; */
+        width: 100%;
+        margin: 10px auto 40px;
+      }
+
+      .flow-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+      }
+
+      .flow-item {
+        position: relative;
+        text-align: center;
+        height: fit-content;
+      }
+
+      .exam-info-lists {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 30px;
+        /* align-items: center; */
+      }
+
+      .language-box,
+      .subject-box {
+        width: 50%;
+      }
+
+      .language-box {
+        background-color: #788b0b6c;
+        padding: 10px;
+        margin-right: 5px;
+        border-radius: 8px;
+      }
+
+      .subject-box {
+        background-color: #788b0b6c;
+        padding: 10px;
+        margin-left: 5px;
+        border-radius: 8px;
+      }
+
+      /* CARD */
+      .flow-card {
+        position: relative;
+        z-index: 2;
+        background: #f5f6fa;
+        border-radius: 20px 20px 20px 20px;
+        padding: 48px 28px;
+        max-width: 200px;
+        margin: auto;
+        height: 280px;
+      }
+
+      .card-1 {
+        box-shadow: 0 0 15px #788b0b9a;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+
+      .card-2 {
+        box-shadow: 0 0 15px #788b0b9a;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+
+      .card-3 {
+        box-shadow: 0 0 15px #788b0b9a;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+
+      .card-4 {
+        box-shadow: 0 0 15px #788b0b9a;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+
+      .card-1:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 5px 25px #444e009a;
+      }
+
+      .card-2:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 5px 25px #444e009a;
+      }
+
+      .card-3:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 5px 25px #444e009a;
+      }
+
+      .card-4:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 5px 25px #444e009a;
+      }
+
+      .step-number {
+        font-size: 44px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        color: #829600;
+      }
+
+      .flow-card h3 {
+        margin: 0 0 10px;
+        font-size: 20px;
+      }
+
+      .flow-card p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: var(--muted);
+      }
+
+      /* ================= REWARD ================ */
+      .reward-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+      }
+
+      .reward-item {
+        position: relative;
+        text-align: center;
+      }
+
+      /* CARD */
+      .reward-card {
+        position: relative;
+        z-index: 2;
+        border-radius: 20px 20px 20px 20px;
+        border: 2px solid rgba(99, 77, 94, 0.493);
+        background-color: #ffd857cc;
+        box-shadow: 0 0 15px rgba(99, 77, 94, 0.493);
+        /* background-color: rgba(158, 129, 152, 0.493); */
+        width: 250px;
+        margin: auto;
+        min-height: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+      }
+
+      .reward-card img {
+        width: 100%;
+      }
+
+      .rank-number {
+        height: 50%;
+      }
+
+      .rank-prize {
+        height: 50%;
+      }
+
+      .rank-card h3 {
+        margin: 10px 0 0 0;
+        font-size: 2rem;
+      }
+
+      .rank-card p {
+        font-size: 2rem;
+        line-height: 1.6;
+        text-align: center;
+      }
+
+      .prize-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+        margin-top: 40px;
+      }
+
+      .prize-table th {
+        font-size: 20px;
+      }
+
+      .prize-table th,
+      .prize-table td {
+        padding: 12px 16px;
+        border: 1px solid #ddd;
+        text-align: center;
+      }
+
+      .prize-table thead {
+        background-color: #ffdb69;
+        color: #000;
+      }
+
+      .prize-table tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      /* ================= FOOTER ================= */
+      .footer-section {
+        background: #1f2937;
+        color: #f9fafb;
+        padding: 50px 20px 30px;
+        margin-top: 60px;
+      }
+
+      .footer-container {
+        max-width: 1100px;
+        margin: auto;
+        text-align: center;
+      }
+
+      .footer-section h3 {
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+
+      .footer-section h5 {
+        color: #ffdb69;
+        margin-bottom: 25px;
+      }
+
+      .board-members {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 10px;
+        margin-bottom: 25px;
+      }
+
+      .board-members p {
+        margin: 5px 0;
+        font-size: 0.95rem;
+      }
+
+      .contact-details h6 {
+        margin-bottom: 8px;
+        color: #ffdb69;
+      }
+
+      .contact-details p {
+        font-size: 1rem;
+        font-weight: 500;
+      }
+
+      .copyright {
+        margin-top: 25px;
+        border-top: 1px solid #374151;
+        padding-top: 15px;
+        font-size: 0.9rem;
+        color: #9ca3af;
+      }
+
+      /* ================= RESPONSIVE ================= */
+
+      @media (max-width: 1024px) {
+        .nav-inner {
+          padding-left: 25px;
+        }
+
+        main {
+          margin-right: 0;
+        }
+
+        .notify-sidebar {
+          position: static;
+          width: 100%;
+          height: auto;
+        }
+
+        .flow-container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .about-grid {
+          grid-template-columns: 1fr;
+        }
+        .reward-card {
+          width: 150px;
+          min-height: 200px;
+        }
+        .lora-rank {
+          font-weight: 600;
+        }
+
+        .rank-card h3 {
+          font-size: 1.4rem;
+        }
+
+        .reward-card p {
+          font-size: 1.3rem;
+          text-align: center;
+          margin-bottom: 5px;
+        }
+      }
+      @media (max-width: 768px) {
+        .reward-card {
+          width: 120px;
+          min-height: 160px;
+        }
+        .rank-card h3 {
+          font-size: 1.2rem;
+        }
+        .reward-card p {
+          font-size: 1.2rem;
+          text-align: center;
+          margin-bottom: 5px;
+        }
+        .slides img {
+          height: 400px;
+        }
+      }
+      @media (max-width: 550px) {
+        body {
+          width: 100%;
+          margin: 0;
+        }
+        #about {
+          margin: 10%;
+          width: 80%;
+        }
+        .header-inner img {
+          height: 80px;
+        }
+        .header-inner h1 {
+          font-size: 1.5rem;
+        }
+        .nav-inner {
+          width: 80%;
+          padding: 0;
+        }
+        .nav-inner a {
+          font-size: 1rem;
+        }
+        .notification-container {
+          padding-left: 10%;
+          padding-right: 10%;
+        }
+        .vision-section {
+          margin: 10%;
+          width: 80%;
+          padding-left: 0;
+          padding-right: 0;
+        }
+        .exam-info-lists {
+          flex-direction: column;
+        }
+        .language-box,
+        .subject-box {
+          width: 100%;
+        }
+        .subject-box {
+          margin: 0;
+          margin-top: 10px;
+        }
+        .flow-container {
+          grid-template-columns: repeat(1, 1fr);
+        }
+        .reward-container {
+          grid-template-columns: repeat(1, 1fr);
+        }
+        .reward-card {
+          width: 250px;
+          /* min-height:200px; */
+        }
+        .rank-card h3 {
+          font-size: 1.8rem;
+        }
+        .reward-card p {
+          font-size: 1.5rem;
+        }
+        .exam-flow-section {
+          margin: 10%;
+          width: 80%;
+        }
+      }
+
+      @media (max-width: 550px) {
+        .header-inner h1 {
+          font-size: 1.3rem;
+        }
+        .about-slider {
+          height: fit-content;
+        }
+        .slides img {
+          height: 30%;
+        }
+        .rank-1 {
+          order: 1;
+        }
+        .rank-2 {
+          order: 2;
+        }
+        .rank-3 {
+          order: 3;
+        }
+      }
+      p {
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-inner">
+        <img src="Logo.png" alt="Logo" />
+        <h1>NavUday Educational Trust of Assam (NETA)</h1>
+      </div>
+    </header>
+
+    <nav>
+      <div class="nav-inner">
+        <a href="#about">About Us</a>
+        <a href="#vision-aims">Vision & Aims</a>
+        <a href="#exam">About the Exam</a>
+        <a href="#reward">Rewards</a>
+      </div>
+    </nav>
+
+    <div class="notification-container">
+      <marquee behavior="" direction="left">
+        <ul>
+          <li><a href="">Download admit cards for NETA(2026)</a></li>
+          <li><a href="">Download admit cards for NETA(2026)</a></li>
+          <li><a href="">Download admit cards for NETA(2026)</a></li>
+        </ul>
+      </marquee>
+    </div>
+
+    <main>
+      <section id="about">
+        <div class="about-grid">
+          <div class="about-image">
+            <div class="about-slider">
+              <div class="slides">
+                <img src="about_images/image1.jpeg" />
+                <img src="about_images/image2.jpeg" />
+                <img src="about_images/image3.jpeg" />
+                <img src="about_images/image4.jpeg" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 class="lato-bold">About Us</h2>
+            <p>
+              NavUday Educational Trust of Assam (NETA) is committed to
+              nurturing academic excellence, reasoning skills, and future-ready
+              thinkers.
+            </p>
+            <p class="muted">
+              We believe in building thinkers, not just toppers.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="vision-section" id="vision-aims">
+        <div class="vision-container">
+          <h2 class="lato-bold">Vision & Aims</h2>
+          <p class="section-subtitle">
+            To create an inclusive and empowering educational ecosystem that
+            identifies and nurtures academic talent across Assam, enabling
+            students to achieve excellence regardless of their socio-economic
+            background.
+          </p>
+
+          <div class="aims-grid">
+            <div class="aim-card">
+              <h4>
+                <strong>Identification</strong>
+                <i class="bi bi-person-check"></i>
+              </h4>
+              <p>
+                Identifying and encouraging raw academic potential across all
+                districts, from urban centers to the most remote rural areas.
+              </p>
+            </div>
+
+            <div class="aim-card">
+              <h4>
+                <strong>Educational Equity </strong
+                ><i class="bi bi-mortarboard"></i>
+              </h4>
+              <p>
+                Ensuring that financial constraints never become a barrier to
+                quality education and academic growth.
+              </p>
+            </div>
+
+            <div class="aim-card">
+              <h4>
+                <strong>Regional Development </strong
+                ><i class="bi bi-geo-alt"></i>
+              </h4>
+              <p>
+                Contributing to Assam’s human resource development by nurturing
+                ethical, skilled, and knowledgeable individuals.
+              </p>
+            </div>
+
+            <div class="aim-card">
+              <h4>
+                <strong>Competitive Readiness </strong
+                ><i class="bi bi-trophy"></i>
+              </h4>
+              <p>
+                Preparing students for competitive examinations by improving
+                thinking speed, accuracy, and problem-solving skills.
+              </p>
+            </div>
+
+            <div class="aim-card">
+              <h4>
+                <strong>Holistic Learning </strong
+                ><i class="bi bi-diagram-3"></i>
+              </h4>
+              <p>
+                Encouraging students to think beyond textbooks and build strong
+                analytical and conceptual understanding.
+              </p>
+            </div>
+
+            <div class="aim-card">
+              <h4>
+                <strong>Skill Enhancement </strong><i class="bi bi-tools"></i>
+              </h4>
+              <p>
+                Enhancing time management, question interpretation, and exam
+                temperament.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="exam-container">
+        <div id="exam" class="exam-flow-section">
+          <h2 class="lato-bold">About the Examination</h2>
+          <p class="section-subtitle">
+            NavUday Educational Trust of Assam conducts a
+            <strong>State Level Merit Scholarship Examination</strong> for
+            students of <strong>Class V to Class IX</strong>. The examination
+            provides students with a competitive platform to assess their
+            academic potential at the state level.
+          </p>
+          <div class="exam-info-lists">
+            <div class="language-box">
+              <h4>Medium of Examination:</h4>
+              <ul>
+                <li>English</li>
+                <li>Assamese</li>
+                <li>Bengali</li>
+                <li>Bodo</li>
+              </ul>
+            </div>
+
+            <div class="subject-box">
+              <h4>Subjects Covered:</h4>
+              <ul>
+                <li>English Grammar</li>
+                <li>Science</li>
+                <li>Mathematics</li>
+                <li>Reasoning / Mental Ability</li>
+                <li>General Knowledge</li>
+              </ul>
+            </div>
+          </div>
+
+          <br /><br />
+
+          <div class="flow-container">
+            <!-- STEP 1 -->
+            <div class="flow-item step-1">
+              <div class="flow-card card-1">
+                <div class="step-number">01</div>
+                <h3>Registration</h3>
+                <p>Students participate through schools.</p>
+              </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="flow-item step-2">
+              <div class="flow-card card-2">
+                <div class="step-number">02</div>
+                <h3>Examination</h3>
+                <p>State-level exam under strict discipline.</p>
+              </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="flow-item step-3">
+              <div class="flow-card card-3">
+                <div class="step-number">03</div>
+                <h3>Evaluation</h3>
+                <p>Merit-based ranking.</p>
+                <br />
+              </div>
+            </div>
+
+            <!-- STEP 4 -->
+            <div class="flow-item step-4">
+              <div class="flow-card card-4">
+                <div class="step-number">04</div>
+                <h3>Rewards</h3>
+                <p>Scholarships & recognition.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <br />
+
+      <section id="reward" class="exam-flow-section">
+        <h2 class="lato-bold">Rewards</h2>
+        <p class="section-subtitle">
+          Our reward program is designed to motivate and recognize outstanding
+          performance. Top achievers are awarded scholarships, certificates of
+          merit, and special recognition for their dedication and excellence.
+          <br />
+          <br />
+          Beyond prizes, participants gain visibility, confidence, and
+          opportunities that help shape their academic and professional journey.
+        </p>
+
+        <div class="reward-container">
+          <!-- STEP 2 -->
+          <div class="rank-2" bg>
+            <div class="reward-card rank-card">
+              <div class="rank-number"><img src="rank2.png" alt="" /></div>
+              <div class="rank-prize">
+                <h3 class="lora-rank">2nd RANK</h3>
+                <p><strong>Rs 7,500</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 1 -->
+          <div class="rank-1">
+            <div class="reward-card rank-card">
+              <div class="rank-number"><img src="rank1.png" alt="" /></div>
+              <div class="rank-prize">
+                <h3 class="lora-rank">1st RANK</h3>
+                <p><strong>Rs 10,500</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 3 -->
+          <div class="rank-3">
+            <div class="reward-card rank-card">
+              <div class="rank-number"><img src="rank3.png" alt="" /></div>
+              <div class="rank-prize">
+                <h3 class="lora-rank">3rd RANK</h3>
+                <p><strong>Rs 3,500</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <table class="prize-table">
+            <thead>
+              <tr>
+                <th>Marks / Rank</th>
+                <th>Prize Amount (₹)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>90 – 92</td>
+                <td>1,500</td>
+              </tr>
+              <tr>
+                <td>86 – 88</td>
+                <td>750</td>
+              </tr>
+              <tr>
+                <td>82 – 84</td>
+                <td>500</td>
+              </tr>
+              <tr>
+                <td>78 – 80</td>
+                <td>250</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ================= FOOTER ================= -->
+      <footer class="footer-section">
+        <div class="footer-container">
+          <h3>NAVUDAY EDUCATIONAL TRUST OF ASSAM</h3>
+          <h5>DIRECTORY BOARD</h5>
+
+          <div class="board-members">
+            <p><strong>Chairman:</strong> Pinku Choudhury</p>
+            <p><strong>Managing Director:</strong> Kunal Choudhury</p>
+            <p><strong>Trust Secretary:</strong> Akash Daimari</p>
+            <p><strong>Public Relation Officer:</strong> Bijoy Kr. Nath</p>
+          </div>
+
+          <div class="contact-details">
+            <h6>Contact Numbers</h6>
+            <p>
+              9101916145 | 9395068094 | 9365804178 | 8638761484 | 9707028739
+            </p>
+          </div>
+
+          <div class="copyright">
+            <p>
+              © 2026 NavUday Educational Trust of Assam (NETA). All Rights
+              Reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
